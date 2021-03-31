@@ -20,7 +20,7 @@
 
 ## Include
 
-- [00. Hello Window]() - Mainly explain how to create a Window through VSCode.
+- [00. Hello Window](https://github.com/imacwink/LearnDirect3D11/tree/main/00.%20Hello%20Window) - Mainly explain how to create a Window through VSCode.
 - [01. Hello Window]() - Mainly explain how to create a Window through VSCode.
 
 ## Dependencies 
