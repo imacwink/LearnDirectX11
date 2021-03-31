@@ -1,0 +1,37 @@
+{
+    "configurations": [
+        {
+            "name": "x64",
+            "includePath": [
+                "${workspaceRoot}/dependencies/glmsource",
+                "${workspaceRoot}/include"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+
+                /**
+                 * Its function is actually to remove some unnecessary header files when our project contains <windows.h> to speed up the compilation.
+                 * If you are interested, you can jump into <windows.h> and search for WIN32_LEAN_AND_MEAN to see the removal Which header files have been added.
+                 */
+                "WIN32_LEAN_AND_MEAN",
+
+                /**
+                 * The standard library defines two template functions std::min() and std::max() in the <algorithm> header. Unfortunately, they cannot be used in 
+                 * Visual C++ because these function templates are not defined. The reason is that the names min and max conflict with the traditional min/max
+                 * macro definitions in <windows.h>. To solve this problem, Visual C++ defines two other templates with the same function: _cpp_min() and _cpp_max().
+                 * We can use them instead of std::min() and std::max(). In order to disable the min/max macro definition in Visual C++, you can add: NOMINMAX before 
+                 * including the <windows.h> header file
+                 */
+                "NOMINMAX"
+            ],
+            "windowsSdkVersion": "10.0.17763.0",
+            "compilerPath": "D:/App/VS2019/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29333/bin/Hostx64/x64/cl.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}

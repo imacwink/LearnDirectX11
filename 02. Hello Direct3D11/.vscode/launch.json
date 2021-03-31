@@ -1,0 +1,17 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "CL-LAUNCH",
+            "type": "cppvsdbg", // Debugger type: Windows debugger uses cppvsdbg; GDB and LLDB use cppdbg. The value is automatically generated.
+            "request": "launch", // Debugging method.
+            "program": "${workspaceRoot}/builds/windows/debug/main", // The program to be debugged (full path, relative path is supported).
+            "args": [], // The parameters passed to the above program, no parameters can be left blank.
+            "stopAtEntry": false, // // Whether to stop at the program entry point (stop at the beginning of the main function).
+            "cwd": "${workspaceRoot}", // Working directory when debugging the program.
+            "environment": [],
+            "externalConsole": true, // Whether to display the console window when debugging.
+            "preLaunchTask": "CL-BUILD"
+        }
+    ]
+}

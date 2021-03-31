@@ -1,0 +1,48 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "CL-BUILD",
+            "type": "shell",
+            "command": "cl",
+            "windows": {
+                "args": [
+                    "/DWIN32_LEAN_AND_MEAN",
+                    "/DNOMINMAX",
+                    "/DUNICODE",
+                    "/EHa-", // Enables standard C++ stack unwinding. Catches both structured (asynchronous) and standard C++ (synchronous) exceptions when you use catch(...) syntax. /EHa overrides both /EHs and /EHc arguments.
+                    "/GR-", // Enable C++ RTTI.
+                    "/Oi", // Enable internal functions.
+                    "/W4", // The warning options specify which compiler warnings to display and the warning behavior for the entire compilation.
+                    "/Od", // No optimization.
+                    "/MTd", // Debug Static MultiThread and need link LIBCMTD.LIB. 
+                    "/Zi", // Generate .pdb file, if you don’t wanrate it, you can use /Z7, this will save all debugging information into the .obj filet to gene.
+                    "/Fd:${workspaceRoot}/builds/windows/debug/main", // Name the .pdb file.
+                    "/Fo:${workspaceRoot}/builds/windows/debug/main", // Name the .obj file.
+                    "/Fm:${workspaceRoot}/builds/windows/debug/main", // Name the .map file.
+                    "/Fe:${workspaceRoot}/builds/windows/debug/main", // Name the .exe file.
+                    "/I${workspaceRoot}/include",
+                    "/ID:/App/VS2019/Microsoft Visual Studio/2019/Community/VC/Tools/MSVC/14.28.29333/include",
+                    "/IC:/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/shared",
+                    "/IC:/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/um",
+                    "/IC:/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/ucrt",
+                    "/IC:/Program Files (x86)/Windows Kits/10/Include/10.0.18362.0/winrt",
+                    "src/main.cpp",
+                    "/link",
+                    "/subsystem:windows",
+                    "/machine:X64", // The default will be determined according to CL.EXE. Environment variable LIB is set to X64.
+                    "user32.lib",
+                    "gdi32.lib",
+                    "winmm.lib"
+                ]
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$msCompile"
+            ]
+        }
+    ]
+}
