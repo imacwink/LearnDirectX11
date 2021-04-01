@@ -64,8 +64,7 @@ bool GfxDevice::OnRender()
 {	
 	// Clear the buffers to begin the scene.
 	mD3D11Render->BeginScene(1.0f, 0.0f, 0.0f, 1.0f);
-
-
+	
 	// Present the rendered scene to the screen.
 	mD3D11Render->EndScene();
 	return true;

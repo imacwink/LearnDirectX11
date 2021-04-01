@@ -13,24 +13,34 @@
 #define _D3D11_H_
 
 #include <d3d11.h>
+#include <d3dcompiler.h>
 #include <assert.h>
 
 class D3D11Render
 {
 private:
-	bool m_vsync_enabled;
-	int m_videoCardMemory;
-	char m_videoCardDescription[128];
-
 	ID3D11Device* mDevice;
 	ID3D11DeviceContext* mDeviceContext;
 	IDXGISwapChain* mSwapChain;
 	ID3D11RenderTargetView* mRenderTargetView;
 
+	ID3D11VertexShader* mVertexShader;
+	ID3D11PixelShader* mPixelShader;
+	ID3D11InputLayout* mInputLayout;
+
+	UINT mNumVerts;
+	UINT mStride;
+	UINT mOffset;
+	ID3D11Buffer *mVertexBuffer;
+
+	 HWND mHwnd;
+
 private:
 	bool CreateDeviceAndContext();
 	bool CreateSwapChain(int, int, HWND);
 	bool CreateFramebuffer();
+	void CreateShader();
+	void CreateVertexBuffer();
 
 public:
     D3D11Render(/* args */);

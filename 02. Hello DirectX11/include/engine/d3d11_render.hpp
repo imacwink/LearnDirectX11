@@ -18,10 +18,6 @@
 class D3D11Render
 {
 private:
-	bool m_vsync_enabled;
-	int m_videoCardMemory;
-	char m_videoCardDescription[128];
-
 	ID3D11Device* mDevice;
 	ID3D11DeviceContext* mDeviceContext;
 	IDXGISwapChain* mSwapChain;
