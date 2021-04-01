@@ -22,7 +22,7 @@
 
 - [00. Hello Window](https://github.com/imacwink/LearnDirect3D11/tree/main/00.%20Hello%20Window)
 - [01. Framework For Window](https://github.com/imacwink/LearnDirect3D11/tree/main/01.%20Framework%20For%20Window)
-- [02. Hello Direct3D11](https://github.com/imacwink/LearnDirect3D11/tree/main/02.%20Hello%20Direct3D11)
+- [02. Hello DirectX11](https://github.com/imacwink/LearnDirect3D11/tree/main/02.%20Hello%20DirectX11)
 - [03. Triangle](https://github.com/imacwink/LearnDirect3D11/tree/main/03.%20Triangle)
 
 ## Dependencies 

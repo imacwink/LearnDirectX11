@@ -234,7 +234,7 @@ bool Engine::Awake(int& screenWidth, int& screenHeight)
 	// Create the window with the screen settings and get the handle to it.
 	mHwnd = CreateWindowEx(WS_EX_OVERLAPPEDWINDOW,
 							winClass.lpszClassName, 
-							L"02. Hello Direct3D11", 
+							L"02. Hello DirectX11", 
 							WS_OVERLAPPEDWINDOW | WS_VISIBLE,
 						    posX,
 							posY, 
